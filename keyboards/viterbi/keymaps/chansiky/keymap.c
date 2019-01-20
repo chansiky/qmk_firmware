@@ -45,16 +45,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_QWERTY] = LAYOUT_kc(
   //    ,----+       ----+   ----+   ----+   ----+   ----+   ----.    ,   ----+   ----+   ----+   ----+   ----+   ----+   ----.
-         ESC,        GRV ,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7  ,    8  ,    9  ,    0  ,   MINS,   EQL,
+         ESC,    GRV ,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7  ,    8  ,    9  ,    0  ,   MINS,   EQL,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-     RASE,       TAB ,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U  ,    I  ,    O  ,    P  ,   LBRC,   RBRC,
+        RASE,    TAB ,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U  ,    I  ,    O  ,    P  ,   LBRC,   RBRC,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-    LOWR,ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J  ,    K  ,    L  ,   SCLN,   QUOT,   ENT ,
+    LOWR,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J  ,    K  ,    L  ,   SCLN,   QUOT,   ENT ,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-         CAPS,       LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M  ,   COMM,   DOT ,   SLSH,   RSFT,   BSLS,
-  //`----+       ----+   ----+   ----+   ----+   ----+   ----'    `   ----+   ----+   ----+   ----+   ----+   ----+   ----'
-     BTN1,BTN2,LCTL,LALT,LGUI,LOWR,SPC ,     SPC ,RASE,RGUI,RALT, RCTL ,BSPC,DEL
-  //`----+----+----+----+----+----+----'    `----+----+----+----+----+----+----'
+         CAPS,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M  ,   COMM,   DOT ,   SLSH,   RSFT,   BSLS,
+  //`    ----+       ----+   ----+   ----+   ----+   ----+   ----'    `   ----+   ----+   ----+   ----+   ----+   ----+   ----'
+         BTN1,   BTN2,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,   RASE,   RGUI,   RALT,  RCTL ,   BSPC,   DEL
+  //`    ----+   ----+  ----+   ----+   ----+   ----+   ----'    `----+----+----+----+----+----+----'
   ),
 
 /* Lower
