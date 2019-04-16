@@ -34,15 +34,15 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  */
   [_QWERTY] = LAYOUT_kc(
   //    ,----+       ----+   ----+   ----+   ----+   ----+   ----.    ,   ----+   ----+   ----+   ----+   ----+   ----+   ----.
-         ESC,     GRV,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7 ,    8  ,    9  ,    0  ,   BSPC,    DEL,
+            ,     GRV,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7 ,    8  ,    9  ,    0  ,   BSPC,       ,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-         QUOT,    TAB,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U ,    I  ,    O  ,    P  ,   LBRC,   RBRC,
+             ,    TAB,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U ,    I  ,    O  ,    P  ,   BSPC,       ,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-         MINS,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J ,    K  ,    L  ,   SCLN,   ENT,   ENT ,
+             ,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J ,    K  ,    L  ,   SCLN,    ENT,       ,
   //    |----+       ----+   ----+   ----+   ----+   ----+   ----|    |   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-         UNDS,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,   RSFT,   BSLS,
+             ,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,   RSFT,       ,
   //`    ----+       ----+   ----+   ----+   ----+   ----+   ----'    `   ----+   ----+   ----+   ----+   ----+   ----+   ----|
-         BTN1,   BTN2,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   QUOT,   EQL
+             ,   BTN2,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   QUOT,
   //`    ----+   ----+  ----+   ----+   ----+   ----+   ----'    `        ----+   ----+   ----+   ----+   ----+   ----+   ----'
   ),
 
@@ -79,7 +79,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //,----   +----   +   ----+   ----+   ----+   ----+   ----.    ,          ----+   ----+   ----+   ----+   ----+   ----+
             ,       ,       ,       ,       ,       ,       ,            ,  BRID,  BRIU,        ,       ,       ,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
-            ,       ,       ,       ,       ,       ,    GRV,        MUTE,  VOLD,   VOLU,   MPLY,       ,       ,       ,
+            ,       ,       ,       ,   PIPE,   TILD,    GRV,        MUTE,  VOLD,   VOLU,   MPLY,       ,       ,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
             ,       ,   LPRN,   RPRN,   LBRC,   RBRC,   QUOT,        LEFT,  DOWN,     UP,  RIGHT,       ,       ,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
