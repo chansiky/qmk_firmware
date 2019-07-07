@@ -70,9 +70,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
             ,       ,   TILD,   HOME,     UP,    END,   PGUP,            ,   INS,   LPRN,   RPRN,    INS,       ,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
-            ,   CAPS,    GRV,   LEFT,   DOWN,  RIGHT,   PGDN,            ,   DEL,   LBRC,   RBRC,   PIPE,    ENT,       ,
+            ,   CAPS,    GRV,   LEFT,   DOWN,  RIGHT,   PGDN,        BSPC,   DEL,   LBRC,   RBRC,   PIPE,    ENT,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
-            ,       ,   BRID,   BRIU,   VOLD,   VOLU,   MUTE,            ,  BSPC,   LCBR,   RCBR,   BSLS,       ,       ,
+            ,       ,   BRID,   BRIU,   VOLD,   VOLU,   MUTE,        LABK,  RABK,   LCBR,   RCBR,   SLSH,   BSLS,       ,
   //|----   +----   +   ----+   ----+   ----+   ----+   ----|    |          ----+   ----+   ----+   ----+   ----+   ----|
             ,       ,       ,       ,       ,       ,       ,            ,      ,       ,       ,       ,       ,
   //`----   +----   +   ----+   ----+   ----+   ----+   ----'    `          ----+   ----+   ----+   ----+   ----+   ----'
