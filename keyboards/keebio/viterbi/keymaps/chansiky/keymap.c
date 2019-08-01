@@ -31,26 +31,26 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [_QWERTY] = LAYOUT_kc(
-         PGUP,    GRV,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7 ,    8  ,    9  ,    0  ,   BSPC,   DEL,
-         PGDN,    TAB,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U ,    I  ,    O  ,    P  ,   LBRC,  RBRC,
-         HOME,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J ,    K  ,    L  ,   SCLN,   QUOT,   ENT,
-          END,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,   RSFT,  BSLS,
-         BTN1,   BTN2,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   MINS,  EQL
+   BTN1 ,    BTN2,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7 ,    8  ,    9  ,    0  ,   LBRC,  RBRC,
+    PGUP,    TAB,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U ,    I  ,    O  ,    P  ,   BSPC,   DEL,
+    PGDN,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J ,    K  ,    L  ,   SCLN,   QUOT,   ENT,
+     HOME,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,    ENT,  BSLS,
+    END,    GRV,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   BSLS,  EQL
   ),
 
   [_LOWER] = LAYOUT_kc(
-            ,       ,       ,       ,       ,       ,       ,            ,       ,       ,       ,       ,       ,       ,
-            ,       ,     F9,    F10,    F11,    F12,       ,            ,      7,      8,      9,   SLSH,   PAST,       ,
-            ,       ,     F5,     F6,     F7,     F8,       ,            ,      4,      5,      6,   MINS,    EQL,       ,
-            ,       ,     F1,     F2,     F3,     F4,       ,            ,      1,      2,      3,   UNDS,   PPLS,       ,
-            ,       ,       ,       ,       ,       ,       ,            ,      0,       ,       ,       ,       ,
+      ,       ,       ,       ,       ,       ,       ,            ,       ,       ,       ,       ,       ,       ,
+      ,       ,     F9,    F10,    F11,    F12,       ,            ,      7,      8,      9,   SLSH,   PAST,       ,
+      ,       ,     F5,     F6,     F7,     F8,       ,            ,      4,      5,      6,   MINS,    EQL,       ,
+      ,       ,     F1,     F2,     F3,     F4,       ,            ,      1,      2,      3,   UNDS,   PPLS,       ,
+      ,       ,       ,       ,       ,       ,       ,            ,      0,       ,       ,       ,       ,
   ),
 
   [_RAISE] = LAYOUT_kc(
             ,       ,       ,       ,       ,       ,       ,            ,      ,      ,        ,       ,       ,       ,
-            ,       ,   TILD,   HOME,     UP,    END,   PGUP,            ,   INS,   LPRN,   RPRN,   INS,       ,       ,
-            ,   CAPS,    GRV,   LEFT,   DOWN,  RIGHT,   PGDN,            ,   DEL,   LBRC,   RBRC,   PIPE,    ENT,       ,
-            ,       ,   BRID,   BRIU,   VOLD,   VOLU,   MUTE,            ,  BSPC,   LCBR,   RCBR,   BSLS,       ,       ,
+            ,       ,   TILD,   HOME,     UP,    END,   PGUP,            ,   INS,   LPRN,   RPRN,   PIPE,       ,       ,
+            ,   CAPS,    GRV,   LEFT,   DOWN,  RIGHT,   PGDN,            ,   DEL,   LBRC,   RBRC,   BSLS,    ENT,       ,
+            ,       ,   BRID,   BRIU,   VOLD,   VOLU,   MUTE,            ,  BSPC,   LCBR,   RCBR,   SLSH,       ,       ,
             ,       ,       ,       ,       ,       ,       ,            ,      ,   LABK,   RABK,       ,       ,
   ),
 
