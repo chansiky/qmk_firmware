@@ -34,8 +34,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    BTN1 ,    BTN2,    1  ,    2  ,    3  ,    4  ,    5  ,         6  ,    7 ,    8  ,    9  ,    0  ,   LBRC,  RBRC,
     PGUP,    TAB,    Q  ,    W  ,    E  ,    R  ,    T  ,         Y  ,    U ,    I  ,    O  ,    P  ,   BSPC,   DEL,
     PGDN,    ESC,    A  ,    S  ,    D  ,    F  ,    G  ,         H  ,    J ,    K  ,    L  ,   SCLN,   QUOT,   ENT,
-     HOME,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,    RSFT,  BSLS,
-    END,    GRV,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   ENT,  EQL
+     HOME,   LSFT,    Z  ,    X  ,    C  ,    V  ,    B  ,         N  ,    M ,   COMM,   DOT ,   SLSH,    ENT,  PPLS,
+    END,    GRV,   LCTL,   LALT,   LGUI,   LOWR,   SPC ,        SPC ,  RASE,   RGUI,   RALT,   RCTL,   BSLS,  EQL
   ),
 
   [_LOWER] = LAYOUT_kc(
