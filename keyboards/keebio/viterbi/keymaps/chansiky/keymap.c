@@ -39,19 +39,19 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [_LOWER] = LAYOUT_kc(
-      ,       ,       ,       ,       ,       ,       ,            ,       ,       ,       ,       ,       ,       ,
-      ,       ,     F9,    F10,    F11,    F12,       ,            ,      7,      8,      9,   SLSH,   PAST,       ,
-      ,       ,     F5,     F6,     F7,     F8,       ,            ,      4,      5,      6,   MINS,    EQL,       ,
-      ,       ,     F1,     F2,     F3,     F4,       ,            ,      1,      2,      3,   UNDS,   PPLS,       ,
-      ,       ,       ,       ,       ,       ,       ,            ,      0,       ,       ,       ,       ,
-  ),
-
-  [_RAISE] = LAYOUT_kc(
             ,       ,       ,       ,       ,       ,       ,            ,      ,      ,        ,       ,       ,       ,
             ,       ,   TILD,   HOME,     UP,    END,   PGUP,            ,   INS,   LPRN,   RPRN,   PIPE,       ,       ,
             ,   CAPS,    GRV,   LEFT,   DOWN,  RIGHT,   PGDN,            ,   DEL,   LBRC,   RBRC,   BSLS,    ENT,       ,
             ,       ,   BRID,   BRIU,   VOLD,   VOLU,   MUTE,            ,  BSPC,   LCBR,   RCBR,   SLSH,       ,       ,
             ,       ,       ,       ,       ,       ,       ,            ,      ,   LABK,   RABK,       ,       ,
+  ),
+
+  [_RAISE] = LAYOUT_kc(
+      ,       ,       ,       ,       ,       ,       ,            ,       ,       ,       ,       ,       ,       ,
+      ,       ,     F9,    F10,    F11,    F12,       ,            ,      7,      8,      9,   SLSH,   PAST,       ,
+      ,       ,     F5,     F6,     F7,     F8,       ,            ,      4,      5,      6,   MINS,    EQL,       ,
+      ,       ,     F1,     F2,     F3,     F4,       ,            ,      1,      2,      3,   UNDS,   PPLS,       ,
+      ,       ,       ,       ,       ,       ,       ,            ,      0,       ,       ,       ,       ,
   ),
 
   [_ADJUST] = LAYOUT(
