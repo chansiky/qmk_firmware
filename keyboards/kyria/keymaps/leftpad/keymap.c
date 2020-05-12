@@ -198,29 +198,29 @@ void oled_task_user(void) {
 #endif
 
 #ifdef ENCODER_ENABLE
-void encoder_update_user(uint8_t index, bool clockwise) {
+void encoder_update_user(uint8_t index, bool counter_clockwise) {
   if (index == 0) {
     switch(get_highest_layer(layer_state)){
       case LOWER:
-        if (clockwise){
+        if (counter_clockwise){
           tap_code(KC_COMM);
         } else {
           tap_code(KC_DOT);
         }
         break;
       case RAISE:
-        if (clockwise){
-          tap_code(KC_RBRC);
-        } else {
+        if (counter_clockwise){
           tap_code(KC_LBRC);
+        } else {
+          tap_code(KC_RBRC);
         }
         break;
       case QWERTY:
       default:
-        if (clockwise){
-            tap_code(KC_RIGHT);
-        } else {
+        if (counter_clockwise){
             tap_code(KC_LEFT);
+        } else {
+            tap_code(KC_RIGHT);
         }
         break;
     }
@@ -228,14 +228,14 @@ void encoder_update_user(uint8_t index, bool clockwise) {
   else if (index == 1) {
     switch(get_highest_layer(layer_state)){
       case LOWER:
-        if (clockwise) {
+        if (counter_clockwise) {
           tap_code(KC_VOLD);
         } else {
           tap_code(KC_VOLU);
         }
         break;
       case RAISE:
-        if (clockwise) {
+        if (counter_clockwise) {
             tap_code(KC_MINS);
         } else {
             tap_code(KC_EQL);
@@ -243,7 +243,7 @@ void encoder_update_user(uint8_t index, bool clockwise) {
         break;
       case QWERTY:
       default:
-        if (clockwise) {
+        if (counter_clockwise) {
             tap_code(KC_UP);
         } else {
             tap_code(KC_DOWN);
