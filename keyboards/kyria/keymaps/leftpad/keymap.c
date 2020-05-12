@@ -16,10 +16,10 @@
 #include QMK_KEYBOARD_H
 
 enum layers {
-    _QWERTY = 0,
-    _LOWER,
-    _RAISE,
-    _ADJUST
+    QWERTY = 0,
+    LOWER,
+    RAISE,
+    ADJUST
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
@@ -37,11 +37,11 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      | Alt  | Lower| Raise|  | Lower| Raise|      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_QWERTY] = LAYOUT(
-      KC_TILD,  KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                          KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
+    [QWERTY] = LAYOUT(
+      KC_TAB,   KC_Q,   KC_W,   KC_E,   KC_R,   KC_T,                                          KC_Y,   KC_U,  KC_I,    KC_O,    KC_P,    KC_BSPC,
       KC_ESC,   KC_A,   KC_S,   KC_D,   KC_F,   KC_G,                                          KC_H,   KC_J,  KC_K,    KC_L,    KC_SCLN, KC_QUOT,
-      KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B,    _RAISE,  KC_LALT,  KC_RALT, _LOWER,   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT),
-                             KC_LALT,KC_LGUI, _LOWER,    KC_SPC,  KC_LCTL,  KC_RCTL,  KC_SPC,_RAISE,KC_RGUI,  KC_RALT
+      KC_LSFT,  KC_Z,   KC_X,   KC_C,   KC_V,   KC_B, LT(RAISE, RAISE),  KC_LALT, KC_RALT, LT(LOWER, LOWER),   KC_N,   KC_M,  KC_COMM, KC_DOT,  KC_SLSH, RSFT_T(KC_ENT),
+                              KC_DEL, KC_LGUI,  LT(LOWER, LOWER), KC_SPC, KC_LCTL, KC_RCTL, KC_SPC, LT(RAISE, RAISE),KC_RGUI,  KC_MUTE
     ),
 /*
  * Lower Layer: Symbols
@@ -57,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_LOWER] = LAYOUT(
+    [LOWER] = LAYOUT(
        KC_GRV, KC_COMM,   KC_7,    KC_8,    KC_9,  KC_DOT,                                     KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______, _______,
       KC_UNDS, KC_MINS,   KC_4,    KC_5,    KC_6, KC_PPLS,                                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, _______, _______,
       _______,    KC_0,   KC_1,    KC_2,    KC_3,  KC_EQL, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______, _______,
@@ -77,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_RAISE] = LAYOUT(
+    [RAISE] = LAYOUT(
       KC_PGUP, KC_HOME,   KC_F7,   KC_F8,   KC_F9,  KC_F12,                                     _______, _______, KC_LPRN, KC_RPRN,  KC_INS,  KC_DEL,
       KC_PGDN,  KC_END,   KC_F4,   KC_F5,   KC_F6,  KC_F11,                                     _______, _______, KC_LBRC, KC_RBRC, KC_TILD,  KC_GRV,
       _______, KC_MUTE,   KC_F1,   KC_F2,   KC_F3,  KC_F10, _______, _______, _______, _______, _______, _______, KC_LCBR, KC_RCBR, KC_BSLS, KC_PIPE,
@@ -97,7 +97,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *                        |      |      |      |      |      |  |      |      |      |      |      |
  *                        `----------------------------------'  `----------------------------------'
  */
-    [_ADJUST] = LAYOUT(
+    [ADJUST] = LAYOUT(
        KC_DEL, KC_SLSH,   KC_UP, KC_BSLS, KC_LPRN, KC_RPRN,                                     _______,    KC_7,    KC_8,    KC_9, _______, _______,
        KC_INS, KC_LEFT, KC_DOWN,KC_RIGHT, KC_LBRC, KC_RBRC,                                     KC_PPLS,    KC_4,    KC_5,    KC_6, KC_MINS, KC_UNDS,
       _______, KC_SCLN, KC_LCBR, KC_RCBR, KC_LABK, KC_RABK, _______, _______, _______, _______,  KC_EQL,    KC_1,    KC_2,    KC_3,    KC_0, _______,
@@ -126,7 +126,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 };
 
 layer_state_t layer_state_set_user(layer_state_t state) {
-    return update_tri_layer_state(state, _LOWER, _RAISE, _ADJUST);
+    return update_tri_layer_state(state, LOWER, RAISE, ADJUST);
 }
 
 #ifdef OLED_DRIVER_ENABLE
@@ -165,16 +165,16 @@ static void render_status(void) {
     // Host Keyboard Layer Status
     oled_write_P(PSTR("Layer: "), false);
     switch (get_highest_layer(layer_state)) {
-        case _QWERTY:
+        case QWERTY:
             oled_write_P(PSTR("Default\n"), false);
             break;
-        case _LOWER:
+        case LOWER:
             oled_write_P(PSTR("Lower\n"), false);
             break;
-        case _RAISE:
+        case RAISE:
             oled_write_P(PSTR("Raise\n"), false);
             break;
-        case _ADJUST:
+        case ADJUST:
             oled_write_P(PSTR("Adjust\n"), false);
             break;
         default:
@@ -202,17 +202,17 @@ void encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Volume control
         if (clockwise) {
-            tap_code(KC_VOLU);
+            tap_code(KC_PGUP);
         } else {
-            tap_code(KC_VOLD);
+            tap_code(KC_PGDN);
         }
     }
     else if (index == 1) {
         // Page up/Page down
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(KC_VOLD);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_VOLU);
         }
     }
 }
