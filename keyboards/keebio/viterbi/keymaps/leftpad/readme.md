@@ -1,9 +1,12 @@
-# viterbi first
+# leftpad
+
+## making hex file
+### first revision
 ```
 make keebio/viterbi/rev1:leftpad
 ```
 
-# viterbi second
+### second revision
 ```
 make keebio/viterbi/rev2:leftpad
 ```

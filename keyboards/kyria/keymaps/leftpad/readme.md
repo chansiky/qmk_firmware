@@ -12,5 +12,5 @@ they are in a program like photoshop or 3DS-Max.
 
 ## making hex file
 ```
-make lets_split/rev2:leftpad
+make kyria/rev1:leftpad
 ```
