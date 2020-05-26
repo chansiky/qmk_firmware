@@ -130,10 +130,10 @@ void encoder_update_user(uint8_t index, bool counter_clockwise) {
   if (index == 0) {
     switch(get_highest_layer(layer_state)){
       case _LOWER:
-        if (counter_clockwise) {
-            tap_code(KC_LEFT);
+        if (counter_clockwise){
+          tap_code(KC_HOME);
         } else {
-            tap_code(KC_RIGHT);
+          tap_code(KC_END);
         }
         break;
       case _RAISE:
@@ -177,10 +177,10 @@ void encoder_update_user(uint8_t index, bool counter_clockwise) {
         }
         break;
       case _ADJUST:
-        if (counter_clockwise){
-          tap_code(KC_HOME);
+        if (counter_clockwise) {
+            tap_code(KC_LEFT);
         } else {
-          tap_code(KC_END);
+            tap_code(KC_RIGHT);
         }
         break;
       case _QWERTY:
