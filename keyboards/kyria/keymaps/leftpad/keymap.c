@@ -36,13 +36,13 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_LOWER] = LAYOUT(
             KC_GRV, KC_COMM,  KC_7,   KC_8,   KC_9, KC_BSPC,                                     KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______, _______,
            KC_MINS, KC_0,     KC_4,   KC_5,   KC_6, KC_PPLS,                                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, _______, KC_MINS,
-     LSFT_T(KC_ENT),KC_UNDS,  KC_1,   KC_2,   KC_3,  KC_EQL, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_UNDS, _______,
+           _______,KC_UNDS,   KC_1,   KC_2,   KC_3,  KC_EQL, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_UNDS, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [_RAISE] = LAYOUT(
        KC_DEL,  KC_LPRN, KC_SLSH,   KC_UP, KC_BSLS, KC_RPRN,                                     _______,  KC_INS, KC_LPRN, KC_RPRN, KC_PIPE,  KC_DEL,
       KC_CAPS,  KC_LBRC, KC_LEFT, KC_DOWN,KC_RIGHT, KC_RBRC,                                     _______, _______, KC_LBRC, KC_RBRC,  KC_GRV, KC_TILD,
-       _______,KC_LCBR,KC_MS_BTN1,KC_MS_BTN3,KC_MS_BTN2, KC_RCBR, _______, _______, _______, _______, _______, TG(_ADJUST), KC_LCBR, KC_RCBR, KC_BSLS, _______,
+    KC_ENT,KC_LCBR,KC_MS_BTN1,KC_MS_BTN3,KC_MS_BTN2,KC_RCBR, _______, _______, _______, _______, _______, _______, KC_LCBR, KC_RCBR, KC_BSLS, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
@@ -131,9 +131,9 @@ void encoder_update_user(uint8_t index, bool counter_clockwise) {
     switch(get_highest_layer(layer_state)){
       case _LOWER:
         if (counter_clockwise){
-          tap_code(KC_HOME);
+          tap_code(KC_MINS);
         } else {
-          tap_code(KC_END);
+          tap_code(KC_EQL);
         }
         break;
       case _RAISE:
@@ -145,9 +145,9 @@ void encoder_update_user(uint8_t index, bool counter_clockwise) {
         break;
       case _ADJUST:
         if (counter_clockwise){
-          tap_code(KC_MINS);
+          tap_code(KC_HOME);
         } else {
-          tap_code(KC_EQL);
+          tap_code(KC_END);
         }
         break;
       case _QWERTY:
@@ -164,31 +164,31 @@ void encoder_update_user(uint8_t index, bool counter_clockwise) {
     switch(get_highest_layer(layer_state)){
       case _LOWER:
         if (counter_clockwise) {
-            tap_code(KC_PGUP);
+          tap_code(KC_VOLD);
         } else {
-            tap_code(KC_PGDN);
+          tap_code(KC_VOLU);
         }
         break;
       case _RAISE:
-        if (counter_clockwise){
-            tap_code(KC_UP);
-        } else {
-            tap_code(KC_DOWN);
-        }
-        break;
-      case _ADJUST:
         if (counter_clockwise) {
             tap_code(KC_LEFT);
         } else {
             tap_code(KC_RIGHT);
         }
         break;
+      case _ADJUST:
+        if (counter_clockwise) {
+            tap_code(KC_PGUP);
+        } else {
+            tap_code(KC_PGDN);
+        }
+        break;
       case _QWERTY:
       default:
-        if (counter_clockwise) {
-          tap_code(KC_VOLD);
+        if (counter_clockwise){
+            tap_code(KC_UP);
         } else {
-          tap_code(KC_VOLU);
+            tap_code(KC_DOWN);
         }
         break;
     }
