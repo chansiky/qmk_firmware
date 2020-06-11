@@ -35,14 +35,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
     [_LOWER] = LAYOUT(
             KC_GRV, KC_COMM,  KC_7,   KC_8,   KC_9, KC_BSPC,                                     KC_HOME, KC_PGDN, KC_PGUP,  KC_END, _______, _______,
-           KC_MINS, KC_0,     KC_4,   KC_5,   KC_6, KC_PPLS,                                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, _______, KC_MINS,
-           _______,KC_UNDS,   KC_1,   KC_2,   KC_3,  KC_EQL, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, KC_UNDS, _______,
+           KC_MINS, KC_0,     KC_4,   KC_5,   KC_6, KC_PPLS,                                     KC_LEFT, KC_DOWN,   KC_UP,KC_RIGHT, _______, _______,
+           _______,KC_UNDS,   KC_1,   KC_2,   KC_3,  KC_EQL, _______, _______, _______, _______, KC_MUTE, KC_VOLD, KC_VOLU, _______, _______, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [_RAISE] = LAYOUT(
        KC_DEL,  KC_LPRN, KC_SLSH,   KC_UP, KC_BSLS, KC_RPRN,                                     _______,  KC_INS, KC_LPRN, KC_RPRN, KC_PIPE,  KC_DEL,
-      KC_CAPS,  KC_LBRC, KC_LEFT, KC_DOWN,KC_RIGHT, KC_RBRC,                                     _______, _______, KC_LBRC, KC_RBRC,  KC_GRV, KC_TILD,
-    KC_ENT,KC_LCBR,KC_MS_BTN1,KC_MS_BTN3,KC_MS_BTN2,KC_RCBR, _______, _______, _______, _______, _______, _______, KC_LCBR, KC_RCBR, KC_BSLS, _______,
+      KC_CAPS,  KC_LBRC, KC_LEFT, KC_DOWN,KC_RIGHT, KC_RBRC,                                     _______, KC_LCBR, KC_LBRC, KC_RBRC,  KC_RCBR, KC_GRV,
+    KC_ENT,KC_LCBR,KC_MS_BTN1,KC_MS_BTN3,KC_MS_BTN2,KC_RCBR, _______, _______, _______, _______, KC_UNDS, KC_MINS, KC_LABK, KC_RABK, KC_BSLS, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
     [_ADJUST] = LAYOUT(
